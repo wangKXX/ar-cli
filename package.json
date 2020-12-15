@@ -1,0 +1,27 @@
+{
+  "name": "common-cli",
+  "version": "1.0.0",
+  "description": "Automated Vue, react project building tools",
+  "main": "index.js",
+  "bin": {
+    "Wang": "./bin/index.js"
+  },
+  "scripts": {
+    "init": "Wang init"
+  },
+  "keywords": [
+    "cli",
+    "vue",
+    "react"
+  ],
+  "author": "kai.wang",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^6.2.1",
+    "download-git-repo": "^3.0.2",
+    "inquirer": "^7.3.3",
+    "ora": "^5.1.0",
+    "rimraf": "^3.0.2"
+  }
+}
