@@ -31,7 +31,8 @@ program
       ]
     }]).then(({ select }) => {
       const lowSelect = select.toLocaleLowerCase();
-      templateMap[lowSelect](appName);
+      console.log(template);
+      templateMap[lowSelect](template);
     });
   });
 
