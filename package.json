@@ -1,8 +1,9 @@
 {
-  "name": "common-cli",
+  "name": "or-cli",
   "version": "1.0.0",
   "description": "Automated Vue, react project building tools",
   "main": "index.js",
+  "private": false,
   "bin": {
     "or": "./bin/index.js"
   },
