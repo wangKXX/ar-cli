@@ -1,6 +1,6 @@
 {
   "name": "@npmmrwang/or-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Automated Vue, react project building tools",
   "main": "index.js",
   "private": false,
