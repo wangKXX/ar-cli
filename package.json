@@ -4,10 +4,10 @@
   "description": "Automated Vue, react project building tools",
   "main": "index.js",
   "bin": {
-    "Wang": "./bin/index.js"
+    "or": "./bin/index.js"
   },
   "scripts": {
-    "init": "Wang init"
+    "init": "or init"
   },
   "keywords": [
     "cli",
@@ -21,6 +21,7 @@
     "child_process": "^1.0.2",
     "commander": "^6.2.1",
     "download-git-repo": "^3.0.2",
+    "fs": "0.0.1-security",
     "inquirer": "^7.3.3",
     "ora": "^5.1.0",
     "rimraf": "^3.0.2"
