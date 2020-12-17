@@ -1,5 +1,5 @@
 {
-  "name": "or-cli",
+  "name": "@npmmrwang/or-cli",
   "version": "1.0.0",
   "description": "Automated Vue, react project building tools",
   "main": "index.js",
