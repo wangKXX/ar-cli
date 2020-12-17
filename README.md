@@ -7,7 +7,7 @@ npm i @npmmrwang/or-cli -g
 
 ### 2.
 ```
-Wang init <app-name>
+or init <app-name>
 ```
 
 ### 3.
