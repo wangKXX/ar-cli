@@ -1,5 +1,6 @@
 const fs = require("fs");
 const { exec } = require('child_process');
+const ora = require("ora");
 const spinner = ora("Loading undead unicorns");
 const chalk = require("chalk");
 
