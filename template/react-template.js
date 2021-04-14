@@ -6,7 +6,7 @@ const spinner = ora("Loading undead unicorns");
 module.exports = appName => {
   spinner.start("project init....");
   download(
-    "direct:https://github.com/wangKXX/vuex.git",
+    "direct:https://github.com/wangKXX/template.git",
     appName,
     { clone: true },
     err => {
