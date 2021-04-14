@@ -10,12 +10,11 @@ module.exports = function(appName, isInstall) {
     "direct:https://github.com/wangKXX/template/archive/refs/heads/main.zip",
     appName,
     function(err) {
-      console.log(err);
       if (err) {
-        spinner.fail(chalk.red("下载失败 \n" + err));
+        spinner.fail(chalk.red("download failed \n" + err));
         process.exit();
       }
-      spinner.info(chalk.green(`下载成功`));
+      spinner.info(chalk.green(`download sucess`));
       if (isInstall) {
         utils.npmInstall(appName);
       }

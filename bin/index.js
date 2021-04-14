@@ -47,7 +47,6 @@ function npmRunBuild(templateType, template) {
         }
       ])
       .then(({ select }) => {
-        console.log(templateType, template, select);
         select = select.toLocaleLowerCase();
         inputFolderName(templateType, template, select === "yes");
       });

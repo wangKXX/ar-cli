@@ -16,7 +16,7 @@ module.exports = {
         spinner.fail(chalk.red("npm install failed\n" + error));
         process.exit();
       } else {
-        spinner.succeed(chalk.green(`\n cd ${appName} \n npm run serve \n`));
+        spinner.succeed(chalk.green(`\n sucessfully installed\n cd ${appName} \n npm run serve \n`));
       }
     });
   }
