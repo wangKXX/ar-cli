@@ -2,8 +2,9 @@ const download = require("download-git-repo");
 const chalk = require("chalk");
 const ora = require("ora");
 const spinner = ora("Loading undead unicorns");
+const utils = require("../utils");
 
-module.exports = appName => {
+module.exports = (appName, isInstall) => {
   spinner.start("project init....");
   download(
     "direct:https://github.com/wangKXX/template.git",
@@ -15,6 +16,9 @@ module.exports = appName => {
         process.exit();
       }
       spinner.succeed(chalk.green(`下载成功`));
+      if (isInstall) {
+        utils.npmInstall(appName);
+      }
     }
   );
 };

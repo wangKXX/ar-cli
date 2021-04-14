@@ -27,18 +27,34 @@ program
           type: "list",
           name: "select",
           message: "please select vue or react that you want",
-          choices: ["vue", "react"]
+          choices: ["vue"]
         }
       ])
       .then(({ select }) => {
         const lowSelect = select.toLocaleLowerCase();
-        inputFolderName(lowSelect, template);
+        npmRunBuild(lowSelect, template);
       });
   });
 
-function inputFolderName(type, folderName) {
+function npmRunBuild(templateType, template) {
+  inquirer
+      .prompt([
+        {
+          type: "list",
+          name: "select",
+          message: "do you need npm install after download?",
+          choices: ["yes", "no"]
+        }
+      ])
+      .then(({ select }) => {
+        select = select.toLocaleLowerCase();
+        inputFolderName(templateType, template, select === "yes");
+      });
+}
+
+function inputFolderName(type, folderName, select) {
   if (!util.isFileExist(folderName)) {
-    templateMap[type](folderName);
+    templateMap[type](folderName, select);
   } else {
     console.log(chalk.red("folder is existed!"));
     inquirer
@@ -50,7 +66,7 @@ function inputFolderName(type, folderName) {
       }
     ])
     .then(({ forlderName }) => {
-      inputFolderName(type, forlderName)
+      inputFolderName(type, forlderName, select)
     });
   }
 }
