@@ -7,7 +7,7 @@ const utils = require("../utils");
 module.exports = (appName, isInstall) => {
   spinner.start("project init....");
   download(
-    "https://github.com/wangKXX/template.git",
+    "direct:https://github.com/wangKXX/template.git",
     appName,
     { clone: true },
     err => {
