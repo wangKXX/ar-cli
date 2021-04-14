@@ -4,18 +4,18 @@ const ora = require("ora");
 const spinner = ora("Loading undead unicorns");
 const utils = require("../utils");
 
-module.exports = (appName, isInstall) => {
+module.exports = function(appName, isInstall) {
   spinner.start("project init....");
   download(
-    "direct:https://github.com/wangKXX/template.git",
+    "direct:https://github.com/wangKXX/template/archive/refs/heads/main.zip",
     appName,
-    { clone: true },
-    err => {
+    function(err) {
+      console.log(err);
       if (err) {
         spinner.fail(chalk.red("下载失败 \n" + err));
         process.exit();
       }
-      spinner.succeed(chalk.green(`下载成功`));
+      spinner.info(chalk.green(`下载成功`));
       if (isInstall) {
         utils.npmInstall(appName);
       }

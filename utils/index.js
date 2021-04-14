@@ -9,6 +9,7 @@ module.exports = {
     return fs.existsSync(file);
   },
   npmInstall:function(appName) {
+    spinner.start("npm install...");
     const execProcess = `cd ${appName} && npm install`;
     exec(execProcess, function (error, stdout, stderr) {
       if (error) {
